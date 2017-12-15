@@ -1,4 +1,9 @@
 # Review
+Comments that I (Bob Hamelers) have written down when Dennis Broekhuizen talked about my code.
+
+Below:
+I = Dennis Broekhuizen
+You = Bob Hamelers
 
 ## 1 Names
 #### Aspect of code quality
@@ -51,7 +56,7 @@ Everywhere I see outcommented old code. Try to change it before you deliver it i
 In the HistoryController you have a bad example. There is an old completion function with network swift file. Another bad implementation are the print-statements and the not used variables in your QuestionViewController for example. 
 
 #### How to improve next time
-Hold you code clean. When something works, delete right away the old commented code. If you want to hold it, put it outside Xcode. Delete files that you don't use, such as ViewController. 
+Hold your code clean. When something works, delete right away the old commented code. If you want to hold it, put it outside Xcode. Delete files that you don't use, such as ViewController. 
 
 
 ## 5 Formatting
@@ -69,55 +74,66 @@ You did well, but change it when it is not readable anymore. Maybe you have to m
 
 ## 6 Flow
 #### Aspect of code quality
+Level 3
 
+This is the readability from 5 Formatting. Try to change the flow sometimes. You use a lot of jumps but I see that you have too sometimes, because it wouldn't be readable in one function. Think over sometimes if you need really everything.
 
 #### Where in your code are examples of good/bad quality
-
+As said, the SignUpButtonPressed is a really complicated function but other fuctions make it not more clear. Try to make it shorter if possible. I like the other ViewControllers. 
 
 #### How to improve next time
-
+Think ahead what is a good flow. If it is too long, try to make calls. If it makes a lot of call, try to make it orignal more substantive or seperate it really clear. 
 
 
 ## 7 Idiom
 #### Aspect of code quality
+Level 4
 
+I don't see improvement on this point but maybe there is something in the libraries I don't know.
 
 #### Where in your code are examples of good/bad quality
-
+I don't see a lot of good or bad examples. 
 
 #### How to improve next time
-
+Maybe you can look to character count for password, e-mail to username or make extension for string html entities. You can download a podfile also
 
 
 ## 8 Expressions
 #### Aspect of code quality
+Level 4
 
+Besides the outcommented ones, I don't see expressions that aren't useful.
 
 #### Where in your code are examples of good/bad quality
-
+I like the properties marks. It shows the usefull new constants or variables in your file. 
 
 #### How to improve next time
-
+Maybe you can look into lists with scores in the ResultsViewController or in the LeaderbordTableViewController
 
 
 ## 9 Decomposition
 #### Aspect of code quality
+Level 3
 
+I see that the composition is based on the Restaurant App, the Grocr App and the PersonalityQuiz App. That's good. Start small to improve yourself on the way.
 
 #### Where in your code are examples of good/bad quality
-
+Try to separate the leaderbord in real from the ResultsViewController. Decomposition shared values of the HistoryController and the QuestionViewController. This are bad examples. For the rest it looks clean.
 
 #### How to improve next time
-
+Be carefull in passing on variables and constants to other files. It looks really awfull and it makes the code less readable. 
 
 
 ## 10 Modularization
 #### Aspect of code quality
+Level 3
 
+The most modules are clearly seperated.
 
 #### Where in your code are examples of good/bad quality
-
+You have made a loadingStack seperate from the QuestionsStack. I really like that. The IntroductionViewControllor is also nice, to change questions really from logging in. But, have a better look on the ResultsViewController and the LeaderbordTableViewController. They overlap sometimes.
 
 #### How to improve next time
+Make modules really seperated. It is to much to do it this time, but try to make another SignUp controller. 
 
 
