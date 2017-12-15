@@ -2,7 +2,9 @@
 Comments that I (Bob Hamelers) have written down when Dennis Broekhuizen talked about my code.
 
 Below:
+
 I = Dennis Broekhuizen
+
 You = Bob Hamelers
 
 ## 1 Names
