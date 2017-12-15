@@ -12,18 +12,22 @@ import FirebaseDatabase
 
 class ResultsViewController: UIViewController {
 
+    // MARK: Properties
     var responsesScore: Int!
     let currentUser = Auth.auth().currentUser!
     let refScore = Database.database().reference().child("highscore")
     
+    // MARK: Outlets
     @IBOutlet weak var resultAnswerLabel: UILabel!
     
     @IBOutlet weak var resultScoreLabel: UILabel!
     
+    // MARK: UIViewController ResultsViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         resultScoreLabel.text = "Your score is \(responsesScore!)!"
+        // Load ResultsView, hide navigationhide and show score
         
         guard let string = currentUser.email else { return }
         if let index = string.range(of: "@")?.lowerBound {
@@ -32,25 +36,13 @@ class ResultsViewController: UIViewController {
             print(email)
             let score = ["score": responsesScore as Int]
             refScore.child(email).setValue(score)
+            // convert e-mail into user and score
         }
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseDatabase
 
+// MARK: UserScore struct
 struct UserScore {
     
     let user: String

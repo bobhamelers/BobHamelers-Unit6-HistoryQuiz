@@ -11,15 +11,13 @@ import FirebaseDatabase
 
 class QuestionViewController: UIViewController {
     
+    // MARK: Properties
     var questionIndex = 0
     var answersChosenScore = 0
-//    var correctAnswersChosen: [Answer] = []
-//    var incorrectAnswersChosen: [Answer] = []
     let historyController = HistoryController()
     var results = [Result]()
-//    var network: Network?
     
-    
+    // MARK: Outlets
     @IBOutlet weak var loadingStackView: UIStackView!
     @IBOutlet weak var boolStackView: UIStackView!
     @IBOutlet weak var boolSecondStackView: UIStackView!
@@ -29,12 +27,14 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var falseButton: UIButton!
     
+    // MARK: Actions
     @IBAction func trueAnswerButtonPressed(_ sender: UIButton) {
         if results[questionIndex].correct_answer == trueButton.currentTitle{
             answersChosenScore += 1
             print(answersChosenScore)
         }
         nextQuestion()
+        // TrueAnswerButtonPressed function and nextQuestion call
     }
     
     @IBAction func falseAnswerButtonPressed(_ sender: UIButton) {
@@ -42,24 +42,10 @@ class QuestionViewController: UIViewController {
             answersChosenScore += 1
         }
         nextQuestion()
+        // FalseAnswerButtonPressed function and nextQuestion call
     }
     
-//    override func viewDidLoad() {
-//        print("test")
-//        historyController.fetchCompletion { (network) in
-//            print("test2")
-//            print(network)
-//            if let network = network {
-//                print(network)
-//                DispatchQueue.main.async {
-//                    print(network)
-////                    self.questions = network.question
-//                }
-//                self.updateUI()
-//            }
-//        }
-//    }
-    
+    // MARK: UIViewController QuestionViewController
     override func viewDidLoad() {
         boolStackView.isHidden = true
         loadingStackView.isHidden = false
@@ -72,6 +58,7 @@ class QuestionViewController: UIViewController {
                 }
             }
         }
+        // LoadingStack is seeable and call for updateUI when has JSON
     }
     
     func updateUI() {
@@ -81,13 +68,10 @@ class QuestionViewController: UIViewController {
         let encodedQuestion = currentResults.question
         let decodedQuestion = String(htmlEncodedString: encodedQuestion)
         let currentQuestion = decodedQuestion
-//        let currentCorrectAnswer = currentResults.correct_answer
-//        let currentIncorrectAnswer = currentResults.incorrect_answers[0]
         
         navigationItem.title = "Question #\(questionIndex+1)"
         questionLabel.text = currentQuestion
-//        trueButton.setTitle(currentCorrectAnswer, for: .normal)
-//        falseButton.setTitle(currentIncorrectAnswer, for: .normal)
+        // UpdateUI function, BoolStack is seeable and some properties
     }
     
     func nextQuestion() {
@@ -98,6 +82,7 @@ class QuestionViewController: UIViewController {
         } else {
             performSegue(withIdentifier: "ResultsSegue", sender: nil)
         }
+        // Go to next question, except when it is the last question
     }
     override func prepare(for segue: UIStoryboardSegue, sender:
         Any?) {
@@ -106,6 +91,7 @@ class QuestionViewController: UIViewController {
             ResultsViewController
             resultsViewController.responsesScore = answersChosenScore
         }
+        // Prepare for ResultsViewController
     }
     
     override func didReceiveMemoryWarning() {
@@ -113,7 +99,7 @@ class QuestionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-// https://stackoverflow.com/questions/25607247/how-do-i-decode-html-entities-in-swift
+// MARK: SOURCE: https://stackoverflow.com/questions/25607247/how-do-i-decode-html-entities-in-swift extension with some own changes to convert html entities
 extension String {
     
     init?(htmlEncodedString: String) {

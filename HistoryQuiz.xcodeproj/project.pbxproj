@@ -14,7 +14,6 @@
 		184E6A521FDEC8560049AF9E /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E6A511FDEC8560049AF9E /* HistoryController.swift */; };
 		184E6A541FE0035D0049AF9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 184E6A531FE0035D0049AF9E /* GoogleService-Info.plist */; };
 		1888048D1FDAD8F4006922C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888048C1FDAD8F4006922C2 /* AppDelegate.swift */; };
-		1888048F1FDAD8F4006922C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888048E1FDAD8F4006922C2 /* ViewController.swift */; };
 		188804921FDAD8F4006922C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188804901FDAD8F4006922C2 /* Main.storyboard */; };
 		188804941FDAD8F4006922C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188804931FDAD8F4006922C2 /* Assets.xcassets */; };
 		188804971FDAD8F4006922C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188804951FDAD8F4006922C2 /* LaunchScreen.storyboard */; };
@@ -34,7 +33,6 @@
 		184E6A531FE0035D0049AF9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		188804891FDAD8F4006922C2 /* HistoryQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HistoryQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1888048C1FDAD8F4006922C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1888048E1FDAD8F4006922C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		188804911FDAD8F4006922C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		188804931FDAD8F4006922C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		188804961FDAD8F4006922C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,25 +80,56 @@
 		1888048B1FDAD8F4006922C2 /* HistoryQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				1892CC1C1FE419A90027A79D /* Controllers */,
+				1892CC1A1FE419900027A79D /* Models */,
+				1892CC1D1FE41AA60027A79D /* Other */,
+				1892CC1B1FE419A20027A79D /* Views */,
 				188804A41FDD85ED006922C2 /* HistoryQuiz.entitlements */,
+				188804931FDAD8F4006922C2 /* Assets.xcassets */,
+				188804981FDAD8F4006922C2 /* Info.plist */,
+				184E6A531FE0035D0049AF9E /* GoogleService-Info.plist */,
+			);
+			path = HistoryQuiz;
+			sourceTree = "<group>";
+		};
+		1892CC1A1FE419900027A79D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				184E6A4D1FDEA1E60049AF9E /* Results.swift */,
+				188804A21FDD8061006922C2 /* User.swift */,
+				18C026571FE2A2790096237F /* UserScore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1892CC1B1FE419A20027A79D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				188804951FDAD8F4006922C2 /* LaunchScreen.storyboard */,
+				188804901FDAD8F4006922C2 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1892CC1C1FE419A90027A79D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				184E6A511FDEC8560049AF9E /* HistoryController.swift */,
 				184E6A431FDE8BF60049AF9E /* IntroductionViewController.swift */,
 				18C026551FE296D30096237F /* LeaderbordTableViewController.swift */,
 				188804A01FDD7398006922C2 /* LoginViewController.swift */,
 				184E6A451FDE8C630049AF9E /* QuestionViewController.swift */,
 				184E6A471FDE8C950049AF9E /* ResultsViewController.swift */,
-				1888048E1FDAD8F4006922C2 /* ViewController.swift */,
-				188804901FDAD8F4006922C2 /* Main.storyboard */,
-				1888048C1FDAD8F4006922C2 /* AppDelegate.swift */,
-				184E6A511FDEC8560049AF9E /* HistoryController.swift */,
-				184E6A4D1FDEA1E60049AF9E /* Results.swift */,
-				188804A21FDD8061006922C2 /* User.swift */,
-				18C026571FE2A2790096237F /* UserScore.swift */,
-				188804931FDAD8F4006922C2 /* Assets.xcassets */,
-				188804951FDAD8F4006922C2 /* LaunchScreen.storyboard */,
-				188804981FDAD8F4006922C2 /* Info.plist */,
-				184E6A531FE0035D0049AF9E /* GoogleService-Info.plist */,
 			);
-			path = HistoryQuiz;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1892CC1D1FE41AA60027A79D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1888048C1FDAD8F4006922C2 /* AppDelegate.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		845F90B8540F8D6FFBD92895 /* Pods */ = {
@@ -272,7 +301,6 @@
 				184E6A461FDE8C630049AF9E /* QuestionViewController.swift in Sources */,
 				184E6A481FDE8C950049AF9E /* ResultsViewController.swift in Sources */,
 				188804A11FDD7398006922C2 /* LoginViewController.swift in Sources */,
-				1888048F1FDAD8F4006922C2 /* ViewController.swift in Sources */,
 				184E6A521FDEC8560049AF9E /* HistoryController.swift in Sources */,
 				1888048D1FDAD8F4006922C2 /* AppDelegate.swift in Sources */,
 			);
