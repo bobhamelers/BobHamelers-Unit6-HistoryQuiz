@@ -15,6 +15,8 @@ When a user has finished the quiz, the user will see his or her score in results
 
 In the leaderbord the user can see the best score of every user sorted from high to low.
 
+[![BCH compliance](https://bettercodehub.com/edge/badge/bobhamelers/BobHamelers-Unit6-HistoryQuiz?branch=master)](https://bettercodehub.com/)
+
 ![Alt Text](https://raw.githubusercontent.com/bobhamelers/BobHamelers-Unit6-HistoryQuiz/master/doc./BobHamelers-Unit6-HistoryQuiz-Screenshot-LoginView.png)
 ![Alt Text](https://raw.githubusercontent.com/bobhamelers/BobHamelers-Unit6-HistoryQuiz/master/doc./BobHamelers-Unit6-HistoryQuiz-Screenshot-RegisterView.png)
 ![Alt Text](https://raw.githubusercontent.com/bobhamelers/BobHamelers-Unit6-HistoryQuiz/master/doc./BobHamelers-Unit6-HistoryQuiz-Screenshot-AlertFailureExample.png)
